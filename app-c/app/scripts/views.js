@@ -12,9 +12,9 @@ var BlogListingView = Backbone.View.extend({
   }
 });
 
-// var BlogListing = Backbone.View.extend({
-//   tagName: 'ul',
-//   renderPost: function(){
-//     var postLink = new BlogListingView({model: });
-//   }
-// });
+var BlogListing = Backbone.View.extend({
+  tagName: 'ul',
+  renderPost: function(){
+    var postLink = new BlogListingView({model: });
+  }
+});
