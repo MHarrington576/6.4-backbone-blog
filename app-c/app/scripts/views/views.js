@@ -13,10 +13,10 @@ var BlogListingView = Backbone.View.extend({
     this.listenTo(this.collection, 'add', this.render);
   },
 
-  render: function(person){
-    person = person.toJSON();
-    if(person.title){
-      this.$el.append(this.template(person));
+  render: function(post){
+    post = post.toJSON();
+    if(post.title){
+      this.$el.append(this.template(post));
     }
     return this;
   }
@@ -33,7 +33,11 @@ var BlogBodyView = Backbone.View.extend({
 
   render: function(){
     this.$el.html(this.template(this.model.toJSON()));
-
     return this;
   }
 });
+
+module.exports = {
+  BlogListingView: BlogListingView,
+  BlogBodyView: BlogBodyView
+};

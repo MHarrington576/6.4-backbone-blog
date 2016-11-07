@@ -12,19 +12,27 @@ var AppRouter = Backbone.Router.extend({
 
   initialize: function(){
     this.collection = new models.BlogCollection();
+    this.collection.fetch();
   },
 
   index: function(){
+    console.log('hello');
     var homepageView = new views.BlogListingView({collection: this.collection});
-    this.collection.fetch();
     $('#blog-links').html(homepageView.el);
   },
 
-  blogBody: function(body){
+  blogBody: function(id){
     var self = this;
-    var blog = this.collection.get(body);
+    var blog = this.collection.get(id);
     var bodyView = new views.BlogBodyView({model: blog});
-    $('#blog-body').html(bodyView.el);
+    if(!blog){
+      this.collection.fetch().then(function(){
+        self.blogBody(id);
+      });
+      return
+    };
+
+    $('#blog-body').html(bodyView.render().el);
   }
 });
 
