@@ -1,17 +1,32 @@
-
-// Bootstrap Variables
 $icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
-
-// Import Bootstrap
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'https://fonts.googleapis.com/css?family=Raleway';
 
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+input, textarea {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+textarea {
+  width: 550px;
+  height: 200px;
+}
+
+button {
+  position: relative;
+  bottom: 8px;
+  margin-left: 5px;
 }

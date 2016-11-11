@@ -15,5 +15,6 @@ $(function(){
     event.preventDefault();
     var postDetails = $(event.currentTarget).serializeObject();
     postCollection.create(postDetails);
+    form.reset();
   })
 });
