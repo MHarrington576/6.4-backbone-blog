@@ -16,7 +16,6 @@ var AppRouter = Backbone.Router.extend({
   },
 
   index: function(){
-    console.log('hello');
     var homepageView = new views.BlogListingView({collection: this.collection});
     $('#blog-links').html(homepageView.el);
   },
@@ -40,4 +39,4 @@ var router = new AppRouter();
 
 module.exports = {
   router: router
-}
+};
