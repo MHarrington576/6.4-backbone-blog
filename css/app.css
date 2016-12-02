@@ -5768,16 +5768,8 @@ img {
 body {
   font-family: 'Raleway', sans-serif; }
 
-input, textarea {
-  margin-top: 15px;
-  margin-left: 15px; }
+input {
+  margin-left: 15px;
+  margin-top: 15px; }
 
-textarea {
-  width: 550px;
-  height: 200px; }
-
-button {
-  position: relative;
-  bottom: 8px;
-  margin-left: 5px; }
 /*# sourceMappingURL=app.css.map */
